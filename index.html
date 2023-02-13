@@ -1,0 +1,328 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>AWS Services</title>
+		<style>
+
+#first-bar {
+        background-color: #FF9900;
+        min-height: 120px; 
+    }
+    #second-bar {
+        background-color: #FF9900;
+        vertical-align: middle;
+        min-height: 120px; 
+        font-weight: bold;
+        font-size: 3em;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        color: #000000;
+    }
+    #second-bar p {
+        margin: 0;
+          text-align: center;
+          position: relative;
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+    }
+
+    #third-bar {
+        background-color: #FF9900;
+        min-height: 120px; 
+        margin: 0;
+    }
+    #fourth-bar {
+        background-color: #FF9900;
+        min-height: 120px; 
+        font-size: 2.2em;
+        text-align: center;
+        vertical-align: bottom;
+        margin: 0;
+    }
+    #question-text {
+        background-color: #FF9900;
+
+    }
+    #fifth-bar {
+        background-color: #FF9900;
+        min-height: 120px; 
+        vertical-align: bottom;
+        min-height: 120px; 
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+        border: 0;
+    }
+    #sixth-bar {
+        background-color: #FF9900;
+        vertical-align: middle;
+        min-height: 120px; 
+        font-size: 3em;
+        text-align: center;
+        margin: 0;
+        border: 0;
+    }
+
+    body {
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 16x;
+        color: #000000;
+        background-color: #FF9900;
+        margin: 0;
+    }
+
+    #answer:focus {
+        outline: none;
+        border: none;
+        border-bottom: 3px solid white;
+        background-color: #FF9900;
+    }
+
+    #answer {
+        text-align: center;
+        background-color: #FF9900;
+        border: none;
+        border-bottom: 4px solid white;
+        border-left: 4px solid white;
+        border-right: 4px solid gray;
+        border-top: 4px solid gray;
+        color: #FFFFFF;
+        font-size: 1.2em;
+        outline: 2px;
+        max-width: 90%;
+    }
+
+    a {
+        color: #000000;
+    }
+
+    .popup {
+          display: none;
+          position: fixed;
+        z-index: 1;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        overflow: auto;
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0,0.4);
+    }
+
+    .popup-content {
+          background-color: #fefefe;
+        color: #333333;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+    }
+
+    .popup a {
+        color: #000033;
+    }
+
+    .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+    }
+
+		</style>
+
+	</head>
+	<body>
+		<div id="first-bar"></div>
+		<div id="second-bar"><p>How many AWS Services can you name?</p></div>
+		<div id="third-bar"></div>
+        <div id="fourth-bar"><input type="text" id="answer" name="answer" autofocus=""></div>
+        <div id="fifth-bar"><a href="javascript:reset()">🔄 reset</a> | <a href="javascript:share()">🔗 share</a></div>
+        <div id="sixth-bar"></div>
+        <div id="sharePopup" class="popup">
+              <div class="popup-content">
+                    <span class="close">×</span>
+                <h2>How many AWS Services can you name?</h2>
+                    <p id="results"></p>
+                    <p id="copy"><a href="javascript:copy()">📋 Copy to clipboard</a></p>
+                    <p id="Credit">complaints and corrections:  <a href="https://twitter.com/sjramblings_io">Twitter</a> | <a href="https://github.com/sjramblings/awsservices">GitHub</a> | <a href="https://sjramblings.io/">Blog</a></p>
+              </div>
+        </div>
+
+		<script language="javascript">
+  let answers = [
+
+"AWS Account Management", "AWS Activate", "AWS Amplify", "AWS Amplify Admin", "AWS Amplify UI Builder", "AWS App Mesh", "AWS App Mesh Preview", "AWS App Runner", "AWS AppConfig", "AWS AppSync", "AWS Application Auto Scaling", "AWS Application Cost Profiler Service", "AWS Application Discovery Service", "AWS Application Migration Service", "AWS Artifact", "AWS Audit Manager", "AWS Auto Scaling", "AWS Backup", "AWS Backup Gateway", "AWS Backup storage", "AWS Batch", "AWS Billing", "AWS Billing ", "AWS Billing Conductor", "AWS Budget Service", "AWS BugBust", "AWS Certificate Manager", "AWS Certificate Manager Private Certificate Authority", "AWS Chatbot", "AWS Cloud Control API", "AWS Cloud Map", "AWS Cloud9", "AWS CloudFormation", "AWS CloudHSM", "AWS CloudShell", "AWS CloudTrail", "AWS CloudWatch RUM", "AWS CodeArtifact", "AWS CodeBuild", "AWS CodeCommit", "AWS CodeDeploy", "AWS CodeDeploy secure host commands service", "AWS CodePipeline", "AWS CodeStar", "AWS CodeStar Connections", "AWS CodeStar Notifications", "AWS Compute Optimizer", "AWS Config", "AWS Connector Service", "AWS Control Tower", "AWS Cost Explorer Service", "AWS Cost and Usage Report", "AWS Data Exchange", "AWS Data Pipeline", "AWS DataSync", "AWS Database Migration Service", "AWS DeepComposer", "AWS DeepLens", "AWS DeepRacer", "AWS Device Farm", "AWS Direct Connect", "AWS Directory Service", "AWS Elastic Beanstalk", "AWS Elastic Disaster Recovery", "AWS Elemental Appliances and Software", "AWS Elemental Appliances and Software Activation Service", "AWS Elemental MediaConnect", "AWS Elemental MediaConvert", "AWS Elemental MediaLive", "AWS Elemental MediaPackage", "AWS Elemental MediaPackage VOD", "AWS Elemental MediaStore", "AWS Elemental MediaTailor", "AWS Fault Injection Simulator", "AWS Firewall Manager", "AWS Global Accelerator", "AWS Glue", "AWS Glue DataBrew", "AWS Ground Station", "AWS Health APIs and Notifications", "AWS IAM Access Analyzer", "AWS IAM Identity Center (successor to AWS Single Sign-On)", "AWS IAM Identity Center (successor to AWS Single Sign-On) directory", "AWS IQ", "AWS IQ Permissions", "AWS Identity Store", "AWS Identity Sync", "AWS Identity and Access Management Roles Anywhere", "AWS Import Export Disk Service", "AWS IoT", "AWS IoT 1-Click", "AWS IoT Analytics", "AWS IoT Core Device Advisor", "AWS IoT Core for LoRaWAN", "AWS IoT Device Tester", "AWS IoT Events", "AWS IoT Fleet Hub for Device Management", "AWS IoT FleetWise", "AWS IoT Greengrass", "AWS IoT Greengrass V2", "AWS IoT Jobs DataPlane", "AWS IoT RoboRunner", "AWS IoT SiteWise", "AWS IoT Things Graph", "AWS IoT TwinMaker", "AWS Key Management Service", "AWS Lake Formation", "AWS Lambda", "AWS License Manager", "AWS License Manager User Subscriptions", "AWS Mainframe Modernization Service", "AWS Marketplace", "AWS Marketplace Catalog", "AWS Marketplace Commerce Analytics Service", "AWS Marketplace Entitlement Service", "AWS Marketplace Image Building Service", "AWS Marketplace Management Portal", "AWS Marketplace Metering Service", "AWS Marketplace Private Marketplace", "AWS Marketplace Procurement Systems Integration", "AWS Marketplace Vendor Insights", "AWS Microservice Extractor for .NET", "AWS Migration Hub", "AWS Migration Hub Orchestrator", "AWS Migration Hub Refactor Spaces", "AWS Migration Hub Strategy Recommendations", "AWS Mobile Hub", "AWS Network Firewall", "AWS Network Manager", "AWS OpsWorks", "AWS OpsWorks Configuration Management", "AWS Organizations", "AWS Outposts", "AWS Panorama", "AWS Performance Insights", "AWS Price List", "AWS Proton", "AWS Purchase Orders Console", "AWS Recycle Bin", "AWS Resilience Hub Service", "AWS Resource Access Manager", "AWS Resource Groups", "AWS RoboMaker", "AWS SQL Workbench", "AWS Savings Plans", "AWS Secrets Manager", "AWS Security Hub", "AWS Security Token Service", "AWS Server Migration Service", "AWS Serverless Application Repository", "AWS Service Catalog", "AWS Shield", "AWS Signer", "AWS Snow Device Management", "AWS Snowball", "AWS Step Functions", "AWS Storage Gateway", "AWS Support", "AWS Sustainability", "AWS Systems Manager", "AWS Systems Manager GUI Connect", "AWS Systems Manager Incident Manager", "AWS Systems Manager Incident Manager Contacts", "AWS Tag Editor", "AWS Tax Settings", "AWS Tiros", "AWS Transfer Family", "AWS Trusted Advisor", "AWS WAF", "AWS WAF Regional", "AWS WAF V2", "AWS Well-Architected Tool", "AWS X-Ray", "AWS service providing managed private networks", "Alexa for Business", "Amazon API Gateway", "Amazon API Gateway Management", "Amazon API Gateway Management V2", "Amazon AppFlow", "Amazon AppIntegrations", "Amazon AppStream 2.0", "Amazon Athena", "Amazon Braket", "Amazon Chime", "Amazon Cloud Directory", "Amazon CloudFront", "Amazon CloudSearch", "Amazon CloudWatch", "Amazon CloudWatch Application Insights", "Amazon CloudWatch Evidently", "Amazon CloudWatch Logs", "Amazon CloudWatch Synthetics", "Amazon CodeGuru", "Amazon CodeGuru Profiler", "Amazon CodeGuru Reviewer", "Amazon Cognito Identity", "Amazon Cognito Sync", "Amazon Cognito User Pools", "Amazon Comprehend", "Amazon Comprehend Medical", "Amazon Connect", "Amazon Connect Cases", "Amazon Connect Customer Profiles", "Amazon Connect Voice ID", "Amazon Connect Wisdom", "Amazon Data Lifecycle Manager", "Amazon Detective", "Amazon DevOps Guru", "Amazon DynamoDB", "Amazon DynamoDB Accelerator (DAX)", "Amazon EC2", "Amazon EC2 Auto Scaling", "Amazon EC2 Image Builder", "Amazon EC2 Instance Connect", "Amazon EMR Serverless", "Amazon EMR on EKS (EMR Containers)", "Amazon ElastiCache", "Amazon Elastic Block Store", "Amazon Elastic Container Registry", "Amazon Elastic Container Registry Public", "Amazon Elastic Container Service", "Amazon Elastic File System", "Amazon Elastic Inference", "Amazon Elastic Kubernetes Service", "Amazon Elastic MapReduce", "Amazon Elastic Transcoder", "Amazon EventBridge", "Amazon EventBridge Schemas", "Amazon FSx", "Amazon FinSpace", "Amazon Forecast", "Amazon Fraud Detector", "Amazon FreeRTOS", "Amazon GameLift", "Amazon GameSparks", "Amazon GroundTruth Labeling", "Amazon GuardDuty", "Amazon HealthLake", "Amazon Honeycode", "Amazon Inspector", "Amazon Inspector2", "Amazon Interactive Video Service", "Amazon Interactive Video Service Chat", "Amazon Kendra", "Amazon Keyspaces (for Apache Cassandra)", "Amazon Kinesis", "Amazon Kinesis Analytics", "Amazon Kinesis Analytics V2", "Amazon Kinesis Firehose", "Amazon Kinesis Video Streams", "Amazon Lex", "Amazon Lex V2", "Amazon Lightsail", "Amazon Location", "Amazon Lookout for Equipment", "Amazon Lookout for Metrics", "Amazon Lookout for Vision", "Amazon MQ", "Amazon Machine Learning", "Amazon Macie", "Amazon Managed Blockchain", "Amazon Managed Grafana", "Amazon Managed Service for Prometheus", "Amazon Managed Streaming for Apache Kafka", "Amazon Managed Streaming for Kafka Connect", "Amazon Managed Workflows for Apache Airflow", "Amazon Mechanical Turk", "Amazon MemoryDB", "Amazon Message Delivery Service", "Amazon Mobile Analytics", "Amazon Monitron", "Amazon Neptune", "Amazon Nimble Studio", "Amazon OpenSearch Service", "Amazon Personalize", "Amazon Pinpoint", "Amazon Pinpoint Email Service", "Amazon Pinpoint SMS Voice V2", "Amazon Pinpoint SMS and Voice Service", "Amazon Polly", "Amazon QLDB", "Amazon QuickSight", "Amazon RDS", "Amazon RDS Data API", "Amazon RDS IAM Authentication", "Amazon RHEL Knowledgebase Portal", "Amazon Redshift", "Amazon Redshift Data API", "Amazon Redshift Serverless", "Amazon Rekognition", "Amazon Resource Group Tagging API", "Amazon Route 53", "Amazon Route 53 Domains", "Amazon Route 53 Recovery Cluster", "Amazon Route 53 Recovery Controls", "Amazon Route 53 Recovery Readiness", "Amazon Route 53 Resolver", "Amazon S3", "Amazon S3 Glacier", "Amazon S3 Object Lambda", "Amazon S3 on Outposts", "Amazon SES", "Amazon SNS", "Amazon SQS", "Amazon SageMaker", "Amazon SageMaker Ground Truth Synthetic", "Amazon Session Manager Message Gateway Service", "Amazon Simple Email Service v2", "Amazon Simple Workflow Service", "Amazon SimpleDB", "Amazon Sumerian", "Amazon Textract", "Amazon Timestream", "Amazon Transcribe", "Amazon Translate", "Amazon WorkDocs", "Amazon WorkLink", "Amazon WorkMail", "Amazon WorkMail Message Flow", "Amazon WorkSpaces", "Amazon WorkSpaces Application Manager", "Amazon WorkSpaces Web", "AmazonMediaImport", "Apache Kafka APIs for Amazon MSK clusters", "Application Discovery Arsenal", "Database Query Metadata Service", "Elastic Load Balancing", "Elastic Load Balancing V2", "Elemental Support Cases", "Elemental Support Content", "High-volume outbound communications", "Identity And Access Management", "Launch Wizard", "Service Quotas"
+	];
+
+    let found = [ ];
+
+function serialize(data) {
+var flat16 = new Uint16Array(data.length);
+for (let i = 0; i < flat16.length; i++) {
+    flat16[i] = answers.indexOf( data[ i ] );
+}
+
+var flat8 = new Uint8Array(flat16.buffer);
+  let stringified = '';
+  for (let i = 0; i < flat8.byteLength; i++) {
+        stringified += String.fromCharCode(flat8[i]);
+  }
+
+return btoa(stringified);
+}
+
+function deserialize(data) {
+var stringified = atob(data);
+
+var flat8 = new Uint8Array(stringified.length);
+  for (let i = 0; i < flat8.byteLength; i++) {
+        flat8[i] = stringified.charCodeAt(i);
+  }
+
+var flat16 = new Uint16Array(flat8.buffer);	
+ var result = [ ];
+for (let i = 0; i < flat16.length; i++) {
+    result.push(answers[ flat16[ i ] ]);
+}
+
+return result;
+}
+
+function save(name, value) {
+window.localStorage.setItem(name, value);
+}
+
+function restore(name) {
+var value = window.localStorage.getItem(name);
+if (! value) {
+    return undefined;
+}
+
+return value;
+}
+
+function reset() {
+found = [ ];
+results();
+}
+
+function results() {
+    save('AWSServices', serialize(found));
+
+var resultsHTML="<p>";
+
+var count = found.length;
+var reversed = [...found];
+reversed.reverse();
+
+for (const result of reversed) {
+    resultsHTML = resultsHTML + count + ". " + result + "<br/>";	
+    count -= 1;
+    } 
+
+    resultsHTML += "</p>";
+
+document.getElementById('sixth-bar').innerHTML = resultsHTML; 
+}
+
+function normalize(str) {
+return str.toLowerCase().
+    // Accept anything from before a ":"
+    split(':')[0].
+
+    // Map é, ä, ō to their ascii equivalents so that either version is accepted
+    replace('é', 'e').replace('ä', 'a').replace('ō', 'o').
+
+    // Remove all non-alphanumeric characters to ignore spacing and punctuation
+    replace(/[^a-z0-9]/gi, '');
+}
+
+function check() {
+var userInput = normalize(document.getElementById("answer").value);
+
+var result = answers.find(
+    function(str) {
+        return normalize(str) == userInput;
+    }
+);
+
+if (!result) {
+return;
+}
+
+var alreadyFound = found.find(
+    function(str) {
+        return str == result;
+    }
+);
+
+if (alreadyFound) {
+return;
+}
+
+found.push(result);
+document.getElementById("answer").value = '';
+
+results();
+}
+
+function share() {
+document.getElementById('results').innerHTML = '<p><strong>' + found.length + '</strong> out of <strong>' + answers.length + '</strong> AWS Services found! <a href="https://sjramblings.github.io/awsservices">https://sjramblings.github.io/awsservices</a></p>';
+document.getElementById('copy').innerHTML = '<p id="copy"><a href="javascript:copy()">📋 Copy to clipboard</a></p>';
+popup.style.display = "block";
+}
+
+function copy() {
+var text = found.length + ' out of ' + answers.length + ' AWS Services found! https://sjramblings.github.io/awsservices';
+    navigator.clipboard.writeText(text);
+document.getElementById('copy').innerHTML = '<p>Copied!</p>';
+}
+
+function play() {
+var saved = restore('AWSServices');
+  if (saved) {
+    var parsed = deserialize(saved);
+    if (typeof parsed == 'object') {
+        found = parsed;
+        results();
+        }
+  }
+
+document.getElementById('fourth-bar').innerHTML = '<input type="text" id="answer" name="answer" autofocus/>'; 
+document.getElementById('fifth-bar').innerHTML = '<a href="javascript:reset()">🔄 reset</a> | <a href="javascript:share()">🔗 share</a>'; 
+
+  const input = document.querySelector('input');
+  input.addEventListener('input', check);
+}
+
+var popup = document.getElementById("sharePopup");
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  popup.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == popup) {
+        popup.style.display = "none";
+  }
+}
+
+play();
+
+		</script>
+	</body>
+</html>
